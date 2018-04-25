@@ -19,8 +19,17 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic import TemplateView
 
+from rest_framework import routers
+
+from demo import api_views as demo_api_views
+
+# Routers provide an easy way of automatically determining the URL conf.
+router = routers.DefaultRouter()
+router.register(r'posts', demo_api_views.PostViewSet)
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^api/', include(router.urls)),
     url(r'^demo/', include('demo.urls')),
     url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^$', TemplateView.as_view(template_name='index.html'), name='home'),
