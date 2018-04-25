@@ -5,6 +5,9 @@ from django.db import models
 
 
 class Category(models.Model):
+    """
+    Category model with title field.
+    """
     title = models.CharField(max_length=200)
 
     def __str__(self):
@@ -12,6 +15,9 @@ class Category(models.Model):
 
 
 class Tag(models.Model):
+    """
+    Tag model with one title field.
+    """
     title = models.CharField(max_length=200)
 
     def __str__(self):
@@ -19,6 +25,9 @@ class Tag(models.Model):
 
 
 class Post(models.Model):
+    """
+    Post model with on foreign key Category and many to many Tag.
+    """
     posted = models.DateTimeField(auto_now_add=True, editable=False)
     text = models.CharField(max_length=200)
     category = models.ForeignKey(Category)
