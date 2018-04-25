@@ -19,10 +19,10 @@ class Tag(models.Model):
 
 
 class Post(models.Model):
-    posted = models.DateTimeField(auto_created=True)
+    posted = models.DateTimeField(auto_now_add=True, editable=False)
     text = models.CharField(max_length=200)
     category = models.ForeignKey(Category)
-    tags = models.ManyToManyField(Tag)
+    tags = models.ManyToManyField(Tag, blank=True)
 
     def __str__(self):
         return self.text
