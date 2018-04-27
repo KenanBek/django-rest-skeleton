@@ -3,6 +3,14 @@ from demo import serializers
 from rest_framework import viewsets
 
 
+class TagViewSet(viewsets.ModelViewSet):
+    """
+    API view for Tag model.
+    """
+    queryset = models.Tag.objects.all()
+    serializer_class = serializers.TagSerializer
+
+
 class CategoryViewSet(viewsets.ModelViewSet):
     """
     API view for Category model.

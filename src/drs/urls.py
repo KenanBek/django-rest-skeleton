@@ -27,6 +27,7 @@ from demo import api_views as demo_api_views
 router = routers.DefaultRouter()
 router.register(r'categories', demo_api_views.CategoryViewSet)
 router.register(r'posts', demo_api_views.PostViewSet)
+router.register(r'tags', demo_api_views.TagViewSet)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),

@@ -5,6 +5,16 @@ from rest_framework import serializers
 from demo import models
 
 
+class TagSerializer(serializers.HyperlinkedModelSerializer):
+    """
+    Serializer for Tag model.
+    """
+
+    class Meta:
+        model = models.Tag
+        fields = ('title',)
+
+
 class CategorySerializer(serializers.HyperlinkedModelSerializer):
     """
     Serializer for Category model.
