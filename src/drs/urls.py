@@ -25,6 +25,7 @@ from demo import api_views as demo_api_views
 
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
+router.register(r'categories', demo_api_views.CategoryViewSet)
 router.register(r'posts', demo_api_views.PostViewSet)
 
 urlpatterns = [
