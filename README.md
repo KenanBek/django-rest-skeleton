@@ -24,7 +24,7 @@ DRF | 3.7.7
 
 # Project structure
 
-    django-celery-skeleton/
+    django-rest-skeleton/
     |---src                                     # django project folder
     |   |---drs                                 # django root configuration
     |   |   |---settings.py
@@ -54,7 +54,7 @@ DRF | 3.7.7
 ## Copy git repository
 
     git clone https://github.com/KenanBek/django-rest-skeleton.git
-    cd django-celery-skeleton
+    cd django-rest-skeleton
 
 ## Run inside docker
 
