@@ -4,6 +4,20 @@ from rest_framework.test import APITestCase
 from demo import models
 
 
+class BaseAPITests(APITestCase):
+    def test_api(self):
+        r = self.client.get('/api/')
+        self.assertEqual(r.status_code, status.HTTP_200_OK)
+
+    def test_docs(self):
+        r = self.client.get('/docs/')
+        self.assertEqual(r.status_code, status.HTTP_200_OK)
+
+    def test_schemas(self):
+        r = self.client.get('/schemas/')
+        self.assertEqual(r.status_code, status.HTTP_200_OK)
+
+
 class CategoryAPITests(APITestCase):
     def setUp(self):
         for i in range(10):
