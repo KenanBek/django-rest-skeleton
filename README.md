@@ -56,7 +56,7 @@ DRF | 3.7.7
     git clone https://github.com/KenanBek/django-rest-skeleton.git
     cd django-rest-skeleton
 
-## Run inside docker
+## Run on docker
 
     # build docker containers
     docker-compose build
@@ -65,7 +65,11 @@ DRF | 3.7.7
     # option 2: run 3 instances of web over load balancer
     docker-compose up --scale web=3
 
-## Run from local machine
+You can also run manage.py commands using docker environment, for example tests.
+
+    docker-compose run web python ./manage.py test
+
+## Run on local machine
 
     pip install -r requirements.txt
     cd src
