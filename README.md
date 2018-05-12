@@ -53,7 +53,9 @@ DRF | 3.7.7
 
 ## Copy git repository
 
+    # Clone repository
     git clone https://github.com/KenanBek/django-rest-skeleton.git
+    # Move to project's folder
     cd django-rest-skeleton
 
 ## Run on docker
